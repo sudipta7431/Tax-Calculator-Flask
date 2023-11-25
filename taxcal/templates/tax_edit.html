@@ -1,0 +1,193 @@
+{% extends "base.html" %}
+
+{% block title %}
+Tax Calculator
+{% endblock %}
+
+{% block body %}
+<div class="col text-center text-danger">
+    <h4>TAX RETURN EDIT</h4>
+</div>
+<form action="/calculator/edit/{{data_id}}" method="post">
+    <div class="row container-fluid">
+        <!--COLUMN 1-->
+        <div class="col-4">
+            <form action="">
+                <div class="mb-4 mx-5 row text-info">
+                    <label for="staticEmail" class="col-sm-2 col-form-label">Email</label>
+                    <div class="col-sm-10">
+                        <input required="required" type="text" readonly class="form-control-plaintext text-success"
+                            id="staticEmail" value={{current_user.email}}>
+                    </div>
+                </div>
+                <div class="mb-3 mx-4 row-2 container-fluid">
+                    <div class="row py-2">
+                        <label class="col-sm-6 col-form-label">Gross Sal</label>
+                        <div class="col-sm-5">
+                            <input required="required" type="number" value="{{gross_sal}}" class="form-control"
+                                id="gross_sal" name="gross_sal">
+                        </div>
+                    </div>
+                    <div class="row py-2">
+                        <label for="inputPassword" class="col-sm-6 col-form-label">Basic Sal</label>
+                        <div class="col-sm-5">
+                            <input required="required" type="number" value="{{basic_sal}}" class="form-control"
+                                id="basic_sal" name="basic_sal">
+                        </div>
+                    </div>
+
+                    <div class="row py-2">
+                        <label for="inputPassword" class="col-sm-6 col-form-label">Helth Ins</label>
+                        <div class="col-sm-5">
+                            <input required="required" type="number" value="{{helth_ins}}" class="form-control"
+                                id="inputPassword" name="helth_ins">
+                        </div>
+                    </div>
+
+                    <div class="row py-2">
+                        <label for="inputPassword" class="col-sm-6 col-form-label">Insurance Premium</label>
+                        <div class="col-sm-5">
+                            <input required="required" type="number" value="{{insurance_premium}}" class="form-control"
+                                id="inputPassword" name="insurance_premium">
+                        </div>
+                    </div>
+
+                    <div class="row py-2">
+                        <label for="inputPassword" class="col-sm-6 col-form-label">House Ln Principle</label>
+                        <div class="col-sm-5">
+                            <input required="required" type="number" value="{{house_ln_principle}}" class="form-control"
+                                id="inputPassword" name="house_ln_principle">
+                        </div>
+                    </div>
+
+                    <div class="row py-2">
+                        <label for="inputPassword" class="col-sm-6 col-form-label">House Ln Intarest</label>
+                        <div class="col-sm-5">
+                            <input required="required" type="number" class="form-control" id="inputPassword"
+                                name="house_ln_intarest" min="0" max="200000" value="{{house_ln_intarest}}">
+                        </div>
+                    </div>
+
+                    <div class="row py-2">
+                        <label for="inputPassword" class="col-sm-6 col-form-label">Donations</label>
+                        <div class="col-sm-5">
+                            <input required="required" type="number" class="form-control" id="inputPassword"
+                                name="Donation" value="{{Donation}}">
+                        </div>
+                    </div>
+
+                    <div class="row py-2">
+                        <label for="inputPassword" class="col-sm-6 col-form-label">NPS</label>
+                        <div class="col-sm-5">
+                            <input required="required" type="number" class="form-control" id="inputPassword"
+                                name="nps" min="0" max="50000" value="{{nps}}">
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <!--COLUMN 2-->
+        <div class="col-8">
+            <div class="row col-sm text-center border-bottom border-dark">
+                <h6 class="my-1">Exemption</h6>
+            </div>
+
+            <div class="col my-1">
+                <div class="row">
+                    <div class="col-4 bg-secondary">
+                        <div class="row py-2">
+                            <label for="inputPassword" class="col-sm-5 col-form-label">PF(12% basic)</label>
+                            <div class="col-sm-7 my-2">
+                                <input type="text" readonly class="form-control" id="xyz" value="{{pf}}">
+                            </div>
+                        </div>
+                        <div class="row py-2">
+                            <label for="inputPassword" class="col-sm-5">80 C Savings</label>
+                            <div class="col-sm-7 my-2">
+                                <input type="text" readonly class="form-control" id="inputPassword" value="{{c80}}">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-4 bg-success">
+                        <div class="row py-2">
+                            <label for="inputPassword" class="col-sm-5 col-form-label">HRA(40% basic)</label>
+                            <div class="col-sm-7 my-2">
+                                <input type="text" readonly class="form-control" id="xyz" value="{{hra}}">
+                            </div>
+                        </div>
+                        <div class="row py-2">
+                            <label for="inputPassword" class="col-sm-5">80 D Savings</label>
+                            <div class="col-sm-7 my-2">
+                                <input type="text" readonly class="form-control" id="inputPassword" value="{{d80}}">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-4 bg-warning">
+                        <div class="row py-2">
+                            <label for="inputPassword" class="col-sm-5 col-form-label">NPS</label>
+                            <div class="col-sm-7 my-2">
+                                <input type="text" readonly class="form-control" id="xyz" value="{{nps}}">
+                            </div>
+                        </div>
+                        <div class="row py-2">
+                            <label for="inputPassword" class="col-sm-5">80 CCD Savings</label>
+                            <div class="col-sm-7 my-2">
+                                <input type="text" readonly class="form-control" id="inputPassword"
+                                    value="not work">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="row py-2">
+                        <label for="inputPassword" class="col-sm-6 col-form-label">Total Exemption amt : </label>
+                        <div class="col-sm-9 my-2">
+                            <input type="text" readonly class="form-control" id="xyz" value="{{deduction}}">
+                        </div>
+                    </div>
+                    <div class="row col">
+                        <div class="col-6">
+                            <p class="text-secondary">(80C + 80D + 80CCD + HRA + HOUSE LN INTAREST)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col my-1 bg-info container-fluid">
+                <div class="row ">
+                    <div class="col-sm-6">
+                        <p class="text-center">Old Ragime Taxble Income : <input type="text" readonly
+                                class="form-control" id="xyz" value="{{old_taxble_income}}"></p>
+                    </div>
+                    <div class="col-sm-6">
+                        <p class="text-center">New Ragime Taxble Income : <input type="text" readonly
+                                class="form-control" id="xyz" value="{{new_taxble_income}}"></p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <p class="text-center">Old Ragime Tax : <input type="text" readonly class="form-control"
+                                id="xyz" value="{{old_tax}}"></p>
+                    </div>
+                    <div class="col-sm-6">
+                        <p class="text-center">New Ragime Tax : <input type="text" readonly class="form-control"
+                                id="xyz" value="{{new_tax}}"></p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-2">
+                    <a href="{{url_for('dashboard')}}" type="button" class="btn btn-block btn-lg btn-primary">Back</a>
+                </div>
+                <div class="col-5">
+                    <button type="submit" class="float-end btn btn-block btn-lg btn-primary">Calculate Taxble
+                        Income</button>
+                </div>
+                <div class="col-5">
+                    <a href="/statement/{{data_id}}" type="button" class="float-end btn btn-block btn-lg btn-primary">Generate Statement</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+{% endblock %}

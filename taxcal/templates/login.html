@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block title %}
+Login page
+{% endblock %}
+
+{% block body %}
+<link rel="stylesheet" href="../static/sign.css">
+
+<div class="wrapper">
+    <!-- FLASH MESSEGE -->
+    {% with messages = get_flashed_messages(with_categories=true) %}
+    {% if messages %}
+    {% for category, message in messages %}
+    <div class="alert alert-{{ category }} alert-dismissible fade show" role="alert">
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        {{ message }}
+    </div>
+    {% endfor %}
+    {% endif %}
+    {% endwith %}
+
+    <!--LOGIN FROM -->
+    <form class="p-3 mt-3" action="{{url_for('login')}}" method="post">
+        <div class="form-field d-flex align-items-center">
+            <span class="far fa-user"></span>
+            <input required type="email" name="email" id="userName" placeholder="Email">
+        </div>
+        <div class="form-field d-flex align-items-center">
+            <span class="fas fa-key"></span>
+            <input required type="password" name="password" id="pwd" placeholder="Password">
+        </div>
+        <button class="btn mt-3" type="submit">Login</button>
+    </form>
+    <div class="text-center fs-6">
+        <a href="#">Forget password?</a> or <a href="{{url_for('register')}}">Sign up</a>
+    </div>
+</div>
+
+
+{% endblock %}

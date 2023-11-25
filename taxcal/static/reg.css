@@ -1,0 +1,26 @@
+body {
+    background: rgba(117, 217, 230, 0.719)
+}
+
+.form-control:focus {
+    box-shadow: none;
+    border-color: #BA68C8
+}
+
+
+
+.back:hover {
+    color: #682773;
+    cursor: pointer
+}
+
+.labels {
+    font-size: 11px
+}
+
+.add-experience:hover {
+    background: #BA68C8;
+    color: #ffffff;
+    cursor: pointer;
+    border: solid 1px #BA68C8
+}

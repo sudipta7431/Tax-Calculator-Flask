@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+{% block title %}
+Dashboard
+{% endblock %}
+
+{% block body %}
+<style>
+    body {
+        background-color: rgb(243, 221, 194);
+    }
+</style>
+<!-- FLASH MESSEGE -->
+{% with messages = get_flashed_messages(with_categories=true) %}
+{% if messages %}
+{% for category, message in messages %}
+<div class="alert alert-{{ category }} alert-dismissible fade show" role="alert">
+    {{ message }}
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+{% endfor %}
+{% endif %}
+{% endwith %}
+<div class="container">
+    <table class="table table-hover table-striped text-center my-5">
+        {% if tax_data != 0 %}
+        <thead class="table-dark">
+            <tr>
+                <th scope="col">ID</th>
+                <th scope="col">OLD TAX</th>
+                <th scope="col">NEW TAX</th>
+                <th scope="col">PDF</th>
+                <th scope="col">DELETE</th>
+                <th scope="col">CALCULATOR</th>
+            </tr>
+        </thead>
+        {% for data in tax_data %}
+        <tbody>
+            <tr>
+                <th scope="col">{{loop.index}}</th>
+                <th scope="col">{{data.old_tax}}</th>
+                <th scope="col">{{data.new_tax}}</th>
+                <th scope="col">
+                    <a href="/statement/{{data.id}}" type="button" class="btn btn-success btn-sm">Pdf Print</a>
+                </th>
+                <th scope="col">
+                    <a href="/dashboard/delete/{{data.id}}" type="button" class="btn btn-danger btn-sm">Delete</a>
+                </th>
+                <th scope="col">
+                    <a href="/calculator/{{data.id}}" type="button" class="btn btn-primary btn-sm">Edit Data</a>
+                </th>
+            </tr>
+        </tbody>
+        {% endfor %}
+        {% else %}
+        
+        
+        {% endif %}
+    </table>
+</div>
+{% endblock %}

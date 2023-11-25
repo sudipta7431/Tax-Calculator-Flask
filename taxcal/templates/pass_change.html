@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+
+{% block title %}
+{{current_user.first_name}} password
+{% endblock %}
+
+{% block body %}
+
+<link rel="stylesheet" href="../static/pass.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<!-- FLASH MESSEGE -->
+{% with messages = get_flashed_messages(with_categories=true) %}
+{% if messages %}
+{% for category, message in messages %}
+<div class="alert alert-{{ category }} alert-dismissible fade show" role="alert">
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    {{ message }}
+</div>
+{% endfor %}
+{% endif %}
+{% endwith %}
+<div class="container">
+    <div class="signup-form">
+        <form action="{{url_for('pass_change')}}" method="post">
+            <h2 class="text-center">Password Change</h2>
+            <div class="form-group">
+                <input type="password" class="form-control" name="password" placeholder="Old Password" required="required">
+            </div>
+            <div class="form-group">
+                <input type="password" class="form-control" name="password_new" placeholder="New Password" required="required">
+            </div>
+            <div class="form-group">
+                <input type="password" class="form-control" name="password_log" placeholder="Confirm New Password"
+                    required="required">
+            </div>
+            <div class="col form-group text-center">
+                <a href="{{url_for('profile')}}" class="btn btn-success btn-lg btn-block active">Back</a>
+                <button type="submit" class="btn btn-success btn-lg btn-block">Change Password</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+{% endblock %}

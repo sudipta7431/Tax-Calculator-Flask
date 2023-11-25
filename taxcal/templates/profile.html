@@ -1,0 +1,98 @@
+{% extends "base.html" %}
+
+{% block title %}
+Profile
+{% endblock %}
+
+{% block body %}
+<link rel="stylesheet" href="../static/reg.css">
+{% with messages = get_flashed_messages(with_categories=true) %}
+{% if messages %}
+{% for category, message in messages %}
+<div class="alert alert-{{ category }} alert-dismissible fade show" role="alert">
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    {{ message }}
+</div>
+{% endfor %}
+{% endif %}
+{% endwith %}
+<div class="container rounded bg-white mt-5 mb-5">
+    <div class="row">
+        <div class="col-md-3 border-right">
+            <form action="{{url_for('picture_edit')}}" method="post" enctype="multipart/form-data">
+                <div class="d-flex flex-column align-items-center text-center p-3 py-5">
+                    <img class="rounded-circle mt-5" width="150px" src="../static/images/{{current_user.pic}}"><span
+                        class="font-weight-bold">Upload
+                        Profile Image<span style="color: red;">*</span></span>
+                    <div class="mb-3">
+                        <input required class="form-control" name="pic" type="file" id="formFile">
+                    </div>
+                    <button class="btn btn-primary profile-button" type="submit">
+                        Save Picture
+                    </button>
+                </div>
+            </form>
+        </div>
+        <div class="col-md-5 border-right">
+            <div class="p-3 py-5">
+                <!--
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                    <h4 class="text-right">Profile Settings</h4>
+                </div>
+            -->
+                <div class="row mt-2">
+                    <div class="col-md-6"><label class="label">First Name</label><input readonly required type="text"
+                            class="form-control" placeholder="first name" name="f_name"
+                            value="{{current_user.first_name}}"></div>
+                    <div class="col-md-6"><label class="label">Last Name</label><input readonly required type="text"
+                            class="form-control" value="{{current_user.last_name}}" name="l_name"
+                            placeholder="last name"></div>
+                </div>
+
+                <div class="row mt-2">
+                    <div class="col-md-12"><label class="label">Email ID</label><input readonly required type="text"
+                            class="form-control" placeholder="email id" name="email" value="{{current_user.email}}">
+                    </div>
+                    <div class="col-md-12"><label class="label">Address</label><input readonly required type="textarea"
+                            class="form-control" placeholder="address" name="address" value="{{current_user.address}}">
+                    </div>
+                </div>
+                <div class="row mt-2">
+                    <div class="col-md-6"><label class="label">Postcode</label><input readonly required type="text"
+                            class="form-control" placeholder="Postcode" name="postcode"
+                            value="{{current_user.postcode}}"></div>
+                    <div class="col-md-6"><label class="label">State</label>
+                        <input readonly name="state" id="state" class="form-control" value="{{current_user.state}}">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="row p-1 py-5">
+                <div class="mt-2 col-md-6"><label class="label">Date Of Birth</label><input readonly required
+                        type="date" class="form-control datepicker" placeholder="Date Of Birth" name="birth_date"
+                        value="{{current_user.birth_date}}">
+                </div>
+                <div class="mt-2 col-md-6"><label class="label">Gender:</label>
+                    <input readonly class="form-control" name="gender" value="{{current_user.gender}}">
+                </div>
+                <div class="mt-2 col-md-6"><label class="label">Mobile Number</label><input readonly required type="tel"
+                        class="form-control" placeholder="phone number" name="mob" value="{{current_user.mob}}"></div>
+                <div class="mt-2 col-md-6"><label class="label">PAN</label><input readonly required type="text"
+                        class="form-control" value="{{current_user.pan}}" name="pan" placeholder="PAN NUMBER"></div>
+            </div>
+        </div>
+    </div>
+    <div class="row p-2">
+        <div class="text-center">
+            <a class="btn btn-primary mx-5 profile-button" href="{{url_for('profile_edit')}}">
+                Edit Profile
+            </a>
+            <a class="btn btn-primary profile-button" href="{{url_for('pass_change')}}">
+                Change Password
+            </a>
+        </div>
+    </div>
+
+</div>
+{% endblock %}
