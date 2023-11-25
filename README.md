@@ -11,21 +11,28 @@ Fully using Flask a Tax Calculator web-based application
 
 [pyhton app.py]
 
-1. <img width="1280" alt="Screenshot 2023-11-25 at 7 25 19 PM" src="https://github.com/sudipta7431/Tax-Calculator-Flask/assets/85438511/49a27deb-2e31-4399-af9c-6d5d4294943f">
+1. <img width="1280" alt="Screenshot 2023-11-25 at 7 25 19 PM" src="https://github.com/sudipta7431/Tax-Calculator-Flask/assets/85438511/145bf6b8-80fe-4d95-b8d4-b6de3357c554">
 
-2. <img width="1280" alt="Screenshot 2023-11-25 at 7 27 44 PM" src="https://github.com/sudipta7431/Tax-Calculator-Flask/assets/85438511/476d4167-9177-4c78-a7af-7d64a98d6df9">
 
-3. <img width="1280" alt="Screenshot 2023-11-25 at 7 27 54 PM" src="https://github.com/sudipta7431/Tax-Calculator-Flask/assets/85438511/6b92a13b-f499-4fff-a444-8e29d0d5e964">
+2. <img width="1280" alt="Screenshot 2023-11-25 at 7 27 54 PM" src="https://github.com/sudipta7431/Tax-Calculator-Flask/assets/85438511/ee218b05-cce3-4cb7-a6c8-e4b64a41b172">
 
-4. <img width="1280" alt="Screenshot 2023-11-25 at 7 28 21 PM" src="https://github.com/sudipta7431/Tax-Calculator-Flask/assets/85438511/dc41726f-346a-4c0d-a6dc-2f85a67c023e">
 
-5.<img width="1280" alt="Screenshot 2023-11-25 at 7 35 56 PM" src="https://github.com/sudipta7431/Tax-Calculator-Flask/assets/85438511/9b7887b3-e12d-46bb-b3b2-0e3d9f98d657">
+3. <img width="1280" alt="Screenshot 2023-11-25 at 7 27 44 PM" src="https://github.com/sudipta7431/Tax-Calculator-Flask/assets/85438511/9caae468-e548-4ec4-a166-1a9a572f05eb">
 
-6. <img width="1280" alt="Screenshot 2023-11-25 at 7 36 31 PM" src="https://github.com/sudipta7431/Tax-Calculator-Flask/assets/85438511/c0a2a430-27b5-44b2-a063-6ddf2a988773">
 
-7. <img width="1280" alt="Screenshot 2023-11-25 at 7 37 30 PM" src="https://github.com/sudipta7431/Tax-Calculator-Flask/assets/85438511/d0e7dd62-f34f-4523-8050-1341c5383ec6">
- 
-8. <img width="1280" alt="Screenshot 2023-11-25 at 7 50 59 PM" src="https://github.com/sudipta7431/Tax-Calculator-Flask/assets/85438511/08355bd1-28f4-44d3-bb70-52ce72ad4b88">
+4. <img width="1280" alt="Screenshot 2023-11-25 at 7 28 21 PM" src="https://github.com/sudipta7431/Tax-Calculator-Flask/assets/85438511/65bef1aa-48bb-4ef7-b35a-79603a2b8373">
 
-9. <img width="1280" alt="Screenshot 2023-11-25 at 7 39 49 PM" src="https://github.com/sudipta7431/Tax-Calculator-Flask/assets/85438511/037a9446-ea3e-4760-815a-eee25226d871">
+
+5. <img width="1280" alt="Screenshot 2023-11-25 at 7 35 56 PM" src="https://github.com/sudipta7431/Tax-Calculator-Flask/assets/85438511/6a2c9d38-c482-44b8-b586-322d17ca562f">
+
+
+6. <img width="1280" alt="Screenshot 2023-11-25 at 7 36 31 PM" src="https://github.com/sudipta7431/Tax-Calculator-Flask/assets/85438511/4d858d7c-b15d-4378-81b7-8dde14ad38b6">
+
+7.  <img width="1280" alt="Screenshot 2023-11-25 at 7 36 45 PM" src="https://github.com/sudipta7431/Tax-Calculator-Flask/assets/85438511/fb4db783-0288-4481-bcfd-58ec482d53a7">
+
+8. <img width="1280" alt="Screenshot 2023-11-25 at 7 37 30 PM" src="https://github.com/sudipta7431/Tax-Calculator-Flask/assets/85438511/99cd044e-f264-4af6-8c61-426a72c56820">
+
+
+9. <img width="1280" alt="Screenshot 2023-11-25 at 7 50 59 PM" src="https://github.com/sudipta7431/Tax-Calculator-Flask/assets/85438511/70a424a1-b24a-461d-86a2-561160d9f2a1">
+
 
