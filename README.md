@@ -35,4 +35,5 @@ Fully using Flask a Tax Calculator web-based application
 
 9. <img width="1280" alt="Screenshot 2023-11-25 at 7 50 59 PM" src="https://github.com/sudipta7431/Tax-Calculator-Flask/assets/85438511/70a424a1-b24a-461d-86a2-561160d9f2a1">
 
+10. <img width="1280" alt="Screenshot 2023-11-25 at 7 39 49 PM" src="https://github.com/sudipta7431/Tax-Calculator-Flask/assets/85438511/6ad5dddb-8e37-4ca1-a097-70de6d475290">
 
